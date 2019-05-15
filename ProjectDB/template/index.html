@@ -1,0 +1,12 @@
+{% extends "base.html "%}
+
+{% block head_title %}
+    {{web_title}}
+{% endblock %}
+
+{% block content %}
+    {% for item_json in items_lists %}
+        {{item_json}}
+        <h1>---------------</h1>
+    {% endfor %}
+{% endblock %}
