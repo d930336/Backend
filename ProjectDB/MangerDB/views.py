@@ -10,3 +10,4 @@ def homepage(request):
     items = Item.objects.all()
     json_list = json.loads(data)
     return  render(request,'index.html',{'web_title':homepage_title,'items_lists':json_list})
+
