@@ -139,3 +139,94 @@ router.register(r'data',DataViewSet)
 
 ![](https://i.imgur.com/t4dQxVh.png)
 
+## 授權
+
+在viewset中，使用IsAuthenticated
+![](https://i.imgur.com/2hdIxv1.png)
+
+引入登入頁面URL
+![](https://i.imgur.com/UTuaqpq.png)
+
+## 解析 Parsers
+
+> 參考網站:http://www.django-rest-framework.org/api-guide/parsers/#parsersr
+
+讓你的Content-Type只接受某種類型
+通常如果沒有特別去設定 ，一般預設是使用 application / x-www-form-urlencode
+
+
+![](https://i.imgur.com/m4CmFsx.png)
+
+全域設定方式
+```
+REST_FRAMEWORK = {
+    'DEFAULT_PARSER_CLASSES': (
+        'rest_framework.parsers.JSONParser',
+    )
+}
+```
+![](https://i.imgur.com/tJLyTbm.png)
+
+區域設定(設定在自己想要的view上)
+
+![](https://i.imgur.com/JbbP5WN.png)
+
+
+## 自行設定get , post 所需的授權
+
+> ### get 新增下列內容
+> 1.get_permissions
+> 2.status
+> 3.def list
+> 4.context,many
+
+![](https://i.imgur.com/4WPioYb.png)
+
+
+
+#### 1.get_permisssions
+
+繼承下面方法，會透過return來回傳permission
+![](https://i.imgur.com/hWKMTke.png)
+
+所以可以透過下面修改，讓使用者要進行(create的時候，要認證)
+![](https://i.imgur.com/WE7DvQ7.png)
+
+
+#### 實際get方法(list)
+
+繼承list方法
+![](https://i.imgur.com/5A2LD6c.png)
+
+--mixins.py
+![](https://i.imgur.com/7QKSe1i.png)
+
+#### status
+
+參考網站:https://www.django-rest-framework.org/api-guide/status-codes/
+
+> 用來定義http，增加可讀性
+
+![](https://i.imgur.com/MCpogzx.png)
+
+#### context / many
+
+> 因為我們使用的是HyperlinkedModelSerializer，所以需要回傳一個request
+
+![](https://i.imgur.com/iM7GWPs.png)
+
+> 然後加上request的傳送
+
+![](https://i.imgur.com/Z9TRK2v.png)
+
+> 而many則是敘述該物件是多個還是單個
+
+![](https://i.imgur.com/4836Uf6.png)
+
+## 
+
+> ### post
+> 預設@permission_classes都會去呼叫get_permission這個函式，所以我們可以透過複寫他，來操作權限得使用
+
+
+![](https://i.imgur.com/zmIHfuD.png)
