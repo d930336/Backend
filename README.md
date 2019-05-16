@@ -62,6 +62,8 @@ Error Code: 1290. The MySQL server is running with the --secure-file-priv option
 python manage.py createsuperuser
 ```
 
+## ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑2019/05/14進度 ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+
 ## 修改顯示資訊
 
 透過下列方式，可以修改要顯示的範圍(要對應到資料庫)
@@ -97,4 +99,43 @@ template/index.html:
 
 ![](https://i.imgur.com/L590TWD.png)
 
+
+
+## 使用restframework(在分支restframework下)
+
+### ---Serializers.py
+這裡的HyperlinkedModelSerializer，是設定物件關聯性
+>參考資料:https://www.atjiang.com/django-rest-tut5-relationships-and-hyperlinked-apis/
+
+![](https://i.imgur.com/ca08rbB.png)
+
+### ---Views.py
+> 使用ViewSet來設定
+
+![](https://i.imgur.com/NMboaaA.png)
+![](https://i.imgur.com/vuLYnJd.png)
+
+### ---Viewset.py
+> 為了分類，建造一個viewset，將上面的動作做在viewset中
+
+![](https://i.imgur.com/4sS3CBV.png)
+
+> 然後設定Urls
+
+
+
+
+### ---Urls.py
+> 利用Router，我們可以快速設定網址
+> 定義一個router，他的網址位置是data，網頁內容是DataViewSet
+
+```
+router = DefaultRouter()
+router.register(r'data',DataViewSet)
+```
+
+![](https://i.imgur.com/7ipjMPZ.png)
+
+
+![](https://i.imgur.com/t4dQxVh.png)
 
