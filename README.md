@@ -230,3 +230,27 @@ REST_FRAMEWORK = {
 
 
 ![](https://i.imgur.com/zmIHfuD.png)
+
+## 連接css
+
+![](https://i.imgur.com/rIH8jjZ.png)
+
+![](https://i.imgur.com/3VMtYM0.png)
+
+## detail的使用
+
+> 新增一個detail方法，去分配每個id的url
+
+--view.py配置
+![](https://i.imgur.com/T2lcXCt.png)
+
+--url.py配置
+![](https://i.imgur.com/reNZm9p.png)
+
+--detail.html配置
+![](https://i.imgur.com/NbNC3eS.png)
+
+## 將主頁和小頁分開
+![](https://i.imgur.com/JAN1SLC.png)
+
+
