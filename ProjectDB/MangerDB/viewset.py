@@ -26,6 +26,9 @@ class DataViewSet(viewsets.ModelViewSet):
 
         return Response(serializer.data,status = status.HTTP_200_OK)
 
+    def retrieve(self, request , **kwargs):
+        users = Item.objects.all()
+
     #繼承permission，讓他只在有登入下作業
     @permission_classes((IsAuthenticated,))
     def create(self, request, **kwargs):
