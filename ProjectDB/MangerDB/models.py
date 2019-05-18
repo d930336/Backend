@@ -1,4 +1,7 @@
 from django.db import models
+from collections import namedtuple
+
+from django.db import connection
 
 # Create your models here.
 class Item(models.Model):
@@ -18,4 +21,10 @@ class User(models.Model):
     name = models.CharField(max_length=20)
     price = models.PositiveIntegerField()
 
-
+def search_id(**kwargs):
+    id = kwargs.get('id')
+    if id:
+        result = Item.objects.raw('SELECT * FROM mangerdb_item WHERE id = %s', [id])
+    else:
+        result = Item.objects.raw('SELECT * FROM mangerdb_item')
+    return result

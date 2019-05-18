@@ -1,18 +1,32 @@
 from .models import Item
 from .serializers import UserSerializer
+from .models import search_id
+
 
 #rest_framework
 from rest_framework import  viewsets , status
-from rest_framework.decorators import permission_classes
+from rest_framework.decorators import permission_classes,action
 from rest_framework.parsers import JSONParser
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+
+
 
 class DataViewSet(viewsets.ModelViewSet):
     queryset = Item.objects.all()
     serializer_class = UserSerializer
     #設定解析類型
     parser_classes = (JSONParser,)
+
+    @action(methods=['get'],detail=True)
+    def raw_sql_search_id(self, request,pk=None):
+        id = self.get_object().id
+        #我們可以經由print發現request都是空的
+        # print(request.data)
+        items= search_id(id=id)
+        serializer = UserSerializer(items,context = {'request':request}, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
 
     def get_permissions(self):
         if self.action in ('create',):
@@ -25,9 +39,6 @@ class DataViewSet(viewsets.ModelViewSet):
         serializer = UserSerializer(users,context = {'request':request},many=True)
 
         return Response(serializer.data,status = status.HTTP_200_OK)
-
-    def retrieve(self, request , **kwargs):
-        users = Item.objects.all()
 
     #繼承permission，讓他只在有登入下作業
     @permission_classes((IsAuthenticated,))

@@ -254,3 +254,21 @@ REST_FRAMEWORK = {
 ![](https://i.imgur.com/JAN1SLC.png)
 
 
+## Raw SQL 
+
+因為rest framework改版後，捨棄@list_route和@detail_route
+改使用action，下面是action詳細介紹
+![](https://i.imgur.com/hcflJcD.png)
+
+```
+@action(methods=[GET or POST], detail = True)
+```
+而我們要使用Raw SQL，所以先在models下建立函式
+![](https://i.imgur.com/s7Abc5r.png)
+
+然後再在viewset下新增一個方法，被action繼承
+
+![](https://i.imgur.com/XW4Mwlg.png)
+
+結果
+![](https://i.imgur.com/Ul5iTFU.png)
