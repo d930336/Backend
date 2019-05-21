@@ -10,10 +10,10 @@ from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
 router.register(r'data',DataViewSet)
 
+
 urlpatterns = [
     path('', homepage),
     path('detail/<str:post_id>/',detail),
-    path('api/data/<str:post_id>/',detail),
     path('api/',include(router.urls)),
     path("api-auth.",include('rest_framework.urls',namespace='rest_framework')),
     path('admin/', admin.site.urls),

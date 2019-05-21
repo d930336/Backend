@@ -1,11 +1,12 @@
 # 專題實作後端 
 ## (尚未解決需思考的問題)
+> PAGE_SIZE 跑掉的問題
 > 爬蟲的精確度以及資料過濾
 > 資料庫欄位設定以及資料表的連接
 > 主鍵的設定
 > json的顯示方式
 > 搜尋的功能
-> CRUD,GET,POST(是否要直接使用rest framework)
+> SQL injections/ use input validation
 ###### tags: `專題`
 
 
@@ -272,3 +273,70 @@ REST_FRAMEWORK = {
 
 結果
 ![](https://i.imgur.com/Ul5iTFU.png)
+
+
+## Prevent SQl injection(還未解決use input validation)
+
+在使用Raw SQL時，會有SQL injection的問題，為了避免被使用SQL攻擊，我們可以參考
+
+關於Parameter的說明
+:https://stackoverflow.com/questions/4892166/how-does-sqlparameter-prevent-sql-injection
+
+django官網參考範本:
+https://docs.djangoproject.com/en/2.1/ref/models/querysets/
+
+
+但最好的方法還是加上驗證碼，因為這種方式只能防護SQL injections，但如果是其他攻擊，例如:xss，就無法防護
+
+
+
+![](https://i.imgur.com/oHxEdix.png)
+
+
+
+![](https://i.imgur.com/5p6kFya.png)
+
+### 2019/5/21改進
+
+else原本會找不到東西，呈現not found狀態，於是現在不使用資料庫搜尋的方法，而是改使用下面方法
+
+找不到就回傳全部訊息(可能可以把前端設計成搜尋時，如果有多個資料，就是找不到)
+![](https://i.imgur.com/6uDeLxm.png)
+
+
+## ngrok 測試API用
+
+**下載方式:**
+https://dashboard.ngrok.com/get-started
+
+**教學:**
+https://www.youtube.com/watch?v=GCIW-2RTcFY&t=19s
+
+**使用注意:**
+因為預設為不允許，所以在這裡把它改成允許存取
+![](https://i.imgur.com/xkitlmS.png)
+
+## __str__ 
+
+可以利用__str__來重新設定物體字串
+
+![](https://i.imgur.com/9uC763O.png)
+
+我們進入shell模式測試，原本的亂碼變成了title
+
+![](https://i.imgur.com/TWmyNj1.png)
+
+## 新增delete的方法
+ 
+ ![](https://i.imgur.com/YTFsZ5Y.png)
+
+## 下次預計目標，使用detail重構GET/POST權限
+
+detail重構get/post/put
+-> 參考網址:https://www.django-rest-framework.org/tutorial/2-requests-and-responses/
+
+建立樹根(endpoint)
+-> 參考網址:https://www.django-rest-framework.org/tutorial/5-relationships-and-hyperlinked-apis/
+
+REST URL
+-> 參考網址:https://www.django-rest-framework.org/tutorial/6-viewsets-and-routers/

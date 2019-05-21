@@ -10,6 +10,7 @@ from rest_framework.parsers import JSONParser
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
+from rest_framework.pagination import PageNumberPagination
 
 
 class DataViewSet(viewsets.ModelViewSet):
@@ -20,7 +21,10 @@ class DataViewSet(viewsets.ModelViewSet):
 
     @action(methods=['get'],detail=True)
     def raw_sql_search_id(self, request,pk=None):
-        id = self.get_object().id
+        try:
+            id = self.get_object().id
+        except:
+            id = request.data
         #我們可以經由print發現request都是空的
         # print(request.data)
         items= search_id(id=id)
@@ -36,6 +40,7 @@ class DataViewSet(viewsets.ModelViewSet):
     #Get 方法
     def list(self, request, **kwargs):
         users = Item.objects.all()
+        print(self.pagination_class.page_size)
         serializer = UserSerializer(users,context = {'request':request},many=True)
 
         return Response(serializer.data,status = status.HTTP_200_OK)
@@ -44,7 +49,17 @@ class DataViewSet(viewsets.ModelViewSet):
     @permission_classes((IsAuthenticated,))
     def create(self, request, **kwargs):
         id = request.data.get('id')
-        users = Item.objects.create(id = id)
+        title = request.data.get('title')
+        MyClass = request.data.get('MyClass')
+        content = request.data.get('content')
+        users = Item.objects.create(id = id,title= title,MyClass=MyClass,content=content)
         serializer = UserSerializer(users,context = {'request':request})
-
+        print(serializer.data)
         return Response(serializer.data,status=status.HTTP_201_CREATED)
+
+    @permission_classes((IsAuthenticated,))
+    def delete(self,request,**kwargs):
+        id = request.data.get('id')
+        user = Item.objects.delete(id = id)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+

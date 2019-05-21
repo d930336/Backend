@@ -25,7 +25,7 @@ SECRET_KEY = 'spkh01$%j&2_^w@+lqrmtjj7w3v7sd-#$58diqnwg7wfo9wz_7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -132,5 +132,5 @@ STATICFILES_DIRS = [
 #Control how many objects per page are returned.
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10,
+    'PAGE_SIZE': 10
 }

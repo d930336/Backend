@@ -1,7 +1,5 @@
 from django.db import models
-from collections import namedtuple
 
-from django.db import connection
 
 # Create your models here.
 class Item(models.Model):
@@ -9,6 +7,9 @@ class Item(models.Model):
     title = models.CharField(max_length=100)
     MyClass = models.CharField(max_length=20)
     content = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title
 
 class User(models.Model):
     # id = models.CharField(max_length=20)
@@ -21,10 +22,17 @@ class User(models.Model):
     name = models.CharField(max_length=20)
     price = models.PositiveIntegerField()
 
+    def __str__(self):
+        return self.name
+
+#搜尋 ID
 def search_id(**kwargs):
     id = kwargs.get('id')
-    if id:
-        result = Item.objects.raw('SELECT * FROM mangerdb_item WHERE id = %s', [id])
-    else:
-        result = Item.objects.raw('SELECT * FROM mangerdb_item')
+    try:
+        if id:
+            result = Item.objects.extra(where=['id = %s'],params = [id])
+        else:
+            result = Item.objects.all()
+    except Exception as e:
+        return e.args
     return result
