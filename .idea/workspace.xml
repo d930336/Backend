@@ -2,12 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af0949ae-d834-4033-a5c5-5c63f6fe7fee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectDB/MangerDB/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectDB/MangerDB/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectDB/MangerDB/viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectDB/MangerDB/viewset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectDB/ProjectDB/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectDB/ProjectDB/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectDB/ProjectDB/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectDB/ProjectDB/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/MangerDB/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Restframework_Backend/coupon_data/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/MangerDB/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/MangerDB/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/MangerDB/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/MangerDB/migrations/0002_remove_item_created.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/MangerDB/migrations/0003_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/MangerDB/migrations/0004_user_price.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/MangerDB/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/MangerDB/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/MangerDB/serializers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/MangerDB/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/MangerDB/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/MangerDB/viewset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/ProjectDB/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/ProjectDB/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/ProjectDB/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/ProjectDB/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/ProjectDB/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/User/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/User/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/User/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/User/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/User/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/User/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/User/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/static/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/template/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/template/detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/template/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectDB/template/test.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,66 +47,36 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProjectDB/MangerDB/models.py">
+        <entry file="file://$PROJECT_DIR$/Restframework_Backend/Restframework_Backend/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="28" column="13" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProjectDB/MangerDB/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+            <state relative-caret-position="275">
+              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
               <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProjectDB/ProjectDB/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="132" column="5" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProjectDB/MangerDB/viewset.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="25">
-                <caret line="1" column="15" lean-forward="true" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/Restframework_Backend/coupon_data/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProjectDB/ProjectDB/urls.py">
+        <entry file="file://$PROJECT_DIR$/Project_backend/ProjectDB/ProjectDB/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="180">
+              <caret line="9" column="106" selection-start-line="9" selection-start-column="106" selection-end-line="9" selection-end-column="106" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,25 +107,38 @@
         <option value="$PROJECT_DIR$/ProjectDB/template/test.html" />
         <option value="$PROJECT_DIR$/ProjectDB/static/css/main.css" />
         <option value="$PROJECT_DIR$/ProjectDB/template/base.html" />
-        <option value="$PROJECT_DIR$/ProjectDB/MangerDB/admin.py" />
         <option value="$PROJECT_DIR$/ProjectDB/template/detail.html" />
         <option value="$PROJECT_DIR$/ProjectDB/MangerDB/views.py" />
+        <option value="$PROJECT_DIR$/ProjectDB/template/index.html" />
+        <option value="$PROJECT_DIR$/ProjectDB/ProjectDB/settings.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/ProjectDB/MangerDB/models.py" />
+        <option value="$PROJECT_DIR$/ProjectDB/MangerDB/admin.py" />
         <option value="$PROJECT_DIR$/ProjectDB/MangerDB/serializers.py" />
         <option value="$PROJECT_DIR$/ProjectDB/ProjectDB/views.py" />
-        <option value="$PROJECT_DIR$/ProjectDB/template/index.html" />
-        <option value="$PROJECT_DIR$/ProjectDB/MangerDB/models.py" />
-        <option value="$PROJECT_DIR$/ProjectDB/ProjectDB/urls.py" />
-        <option value="$PROJECT_DIR$/ProjectDB/ProjectDB/settings.py" />
         <option value="$PROJECT_DIR$/ProjectDB/MangerDB/viewset.py" />
-        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/ProjectDB/ProjectDB/urls.py" />
+        <option value="$PROJECT_DIR$/Restframework_Backend/Restframework_Backend/settings.py" />
+        <option value="$PROJECT_DIR$/Project_backend/ProjectDB/MangerDB/admin.py" />
+        <option value="$PROJECT_DIR$/Project_backend/ProjectDB/MangerDB/models.py" />
+        <option value="$PROJECT_DIR$/Project_backend/ProjectDB/MangerDB/serializers.py" />
+        <option value="$PROJECT_DIR$/Project_backend/ProjectDB/MangerDB/views.py" />
+        <option value="$PROJECT_DIR$/Project_backend/ProjectDB/MangerDB/viewset.py" />
+        <option value="$PROJECT_DIR$/Project_backend/ProjectDB/ProjectDB/view.py" />
+        <option value="$PROJECT_DIR$/Project_backend/ProjectDB/ProjectDB/settings.py" />
+        <option value="$PROJECT_DIR$/Project_backend/ProjectDB/ProjectDB/urls.py" />
+        <option value="$PROJECT_DIR$/Restframework_Backend/coupon_data/serializers.py" />
+        <option value="$PROJECT_DIR$/Restframework_Backend/coupon_data/models.py" />
+        <option value="$PROJECT_DIR$/Restframework_Backend/Restframework_Backend/urls.py" />
+        <option value="$PROJECT_DIR$/Restframework_Backend/coupon_data/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="12" />
-    <option name="y" value="13" />
-    <option name="width" value="1944" />
-    <option name="height" value="1041" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="748" />
+    <option name="y" value="178" />
+    <option name="width" value="1385" />
+    <option name="height" value="1106" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -134,7 +146,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,16 +156,30 @@
             <path>
               <item name="Project_Backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project_Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="ProjectDB" type="462c0819:PsiDirectoryNode" />
+              <item name="Project_backend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Project_Backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Project_Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="Restframework_Backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project_Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project_Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="Restframework_Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="coupon_data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project_Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project_Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="Restframework_Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="Restframework_Backend" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -193,10 +218,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="8" y="9" width="1296" height="694" extended-state="0" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2484127" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24861" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -207,43 +232,38 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4988086" visible="true" weight="0.32206404" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4988086" visible="true" weight="0.3197158" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50079364" side_tool="true" weight="0.32978722" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24861" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4988086" visible="true" weight="0.3197158" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50079364" side_tool="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ProjectDB/template/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectDB/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectDB/MangerDB/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectDB/template/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectDB/template/test.html" />
+    <entry file="file://$PROJECT_DIR$/ProjectDB/static/css/main.css" />
+    <entry file="file://$PROJECT_DIR$/ProjectDB/MangerDB/apps.py" />
+    <entry file="file://$PROJECT_DIR$/ProjectDB/template/base.html" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -251,30 +271,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectDB/template/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectDB/MangerDB/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/generics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectDB/template/detail.html" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -289,13 +286,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectDB/template/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectDB/template/index.html" />
     <entry file="file://$USER_HOME$/Desktop/django-rest-framework-tutorial-master/django-rest-framework-tutorial-master/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -306,64 +297,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectDB/MangerDB/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectDB/User/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectDB/MangerDB/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectDB/MangerDB/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectDB/ProjectDB/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="9" column="64" lean-forward="true" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectDB/ProjectDB/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectDB/ProjectDB/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="132" column="5" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectDB/MangerDB/views.py" />
+    <entry file="file://$PROJECT_DIR$/ProjectDB/User/models.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/mixins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-33">
@@ -371,23 +306,165 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectDB/MangerDB/viewset.py">
+    <entry file="file://$PROJECT_DIR$/ProjectDB/ProjectDB/settings.py" />
+    <entry file="file://$PROJECT_DIR$/ProjectDB/ProjectDB/urls.py" />
+    <entry file="file://$PROJECT_DIR$/ProjectDB/MangerDB/viewset.py" />
+    <entry file="file://$PROJECT_DIR$/ProjectDB/ProjectDB/views.py" />
+    <entry file="file://$PROJECT_DIR$/ProjectDB/MangerDB/serializers.py" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-50">
+            <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectDB/MangerDB/models.py" />
+    <entry file="file://$PROJECT_DIR$/Restframework_Backend/Restframework_Backend/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="255">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectDB/MangerDB/admin.py" />
+    <entry file="file://$PROJECT_DIR$/Project_backend/ProjectDB/MangerDB/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_backend/ProjectDB/ProjectDB/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3300">
+          <caret line="132" column="1" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_backend/ProjectDB/MangerDB/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Restframework_Backend/coupon_data/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Restframework_Backend/coupon_data/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_backend/ProjectDB/MangerDB/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="25">
-            <caret line="1" column="15" lean-forward="true" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/Restframework_Backend/coupon_data/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/management/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="380" selection-start-line="380" selection-end-line="380" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_backend/ProjectDB/MangerDB/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_backend/ProjectDB/ProjectDB/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="30" />
+          <folding>
+            <element signature="e#5#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_backend/ProjectDB/MangerDB/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_backend/ProjectDB/MangerDB/viewset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-575">
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/generics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="200" column="50" lean-forward="true" selection-start-line="199" selection-start-column="3" selection-end-line="200" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_backend/ProjectDB/ProjectDB/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="106" selection-start-line="9" selection-start-column="106" selection-end-line="9" selection-end-column="106" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Restframework_Backend/coupon_data/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="50" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_backend/ProjectDB/MangerDB/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Restframework_Backend/Restframework_Backend/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Restframework_Backend/coupon_data/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
