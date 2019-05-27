@@ -340,3 +340,66 @@ detail重構get/post/put
 
 REST URL
 -> 參考網址:https://www.django-rest-framework.org/tutorial/6-viewsets-and-routers/
+
+# 嘗試使用generics.RetrieveAPIView已ModelView的除錯
+
+使用ModelView時，因為它包含CRUD，所以在想要限制用RetrieveAPIView時，會出現循環輸入url的狀況
+
+> 而我們現在嘗試一開始就用gernerics.RetrieveAPIView
+
+使用CouponList來操作看看
+
+--view.py
+![](https://i.imgur.com/oBMIiKE.png)
+
+--url.py
+![](https://i.imgur.com/vsP1jWf.png)
+
+所以我們可以得知，RetrieveAPIView在url中需要<指定項目>來抓取項目
+
+如果我們使用lookup_field
+![](https://i.imgur.com/uDHLNwr.png)
+
+會出現
+![](https://i.imgur.com/rY91CFS.png)
+
+這是因為原先設定中，是以<pk>連結
+![](https://i.imgur.com/3cNp4rb.png)
+
+--url.py
+![](https://i.imgur.com/dlUWDBi.png)
+
+如果使用coupon_id，要改成
+--url.py
+![](https://i.imgur.com/7lH03fN.png)
+
+## 使用generics.ListAPIView
+
+在Coupon的設計上，我們只有我們自己可以新增和刪除內容，所以我們選擇List，讓使用者只能使用get
+
+![](https://i.imgur.com/3FSH21B.png)
+
+而在url的設定如下
+![](https://i.imgur.com/B1lQG9m.png)
+
+## 判斷create的user_id和user_name是否重複
+
+判斷user_name是否重複
+### --model.py
+藉由讀取使用者輸入的user_name，設立一個result來判斷資料庫是否有重複資料
+![](https://i.imgur.com/ZUecYQX.png)
+
+藉由讀取使用者輸入的user_id，設立一個result來判斷資料庫是否有重複資料
+![](https://i.imgur.com/DOyl75t.png)
+
+
+### --view.py
+
+藉由讀取使用者輸入的id,name(self.get_objcet())，以及實際將值，傳到--model.py來判斷，再回傳看看是否有重複，重複的話跑出提醒訊息，沒有重複就執行create
+
+> self.get_object()是一個class，可用.user_id來呼叫他的user_id
+
+
+![](https://i.imgur.com/GniDr9N.png)
+
+![](https://i.imgur.com/i00VVcZ.png)
