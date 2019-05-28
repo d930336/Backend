@@ -403,3 +403,22 @@ REST URL
 ![](https://i.imgur.com/GniDr9N.png)
 
 ![](https://i.imgur.com/i00VVcZ.png)
+
+## api_root和HyperlinkedModelSerializer
+
+> api_root:
+> 可以把他想成一個根目錄，可以藉由它連結到其他各個子目錄，下圖中我們可以發現是以超連結做關聯，而不是PK做關聯
+
+reverse:反向解析尋找url.py中的鳴子
+
+
+***程式內容對照***
+![](https://i.imgur.com/llCPuyQ.png)
+
+
+
+***實際運作如下***
+![](https://i.imgur.com/2a0UI2N.png)
+
+***url.py內容***
+![](https://i.imgur.com/P3R1dv5.png)
