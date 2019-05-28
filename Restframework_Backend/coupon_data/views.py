@@ -4,9 +4,23 @@ from .serializers import CouponSerializer  ,UserSerializer
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework import status,viewsets,generics
 from rest_framework.response import Response
+
+
+#Creating an endpoint for the root of our API
+from rest_framework.decorators import api_view
+from rest_framework.reverse import reverse
+
+
+#api root
+@api_view(["GET"])
+def api_root(request,format=None):
+    return Response({
+        #reverse 反向解析，目的是找尋url中的name
+        'coupons':reverse('coupons',request=request,format=format),
+        'users':reverse('users',request=request,format=format)
+    })
+
 # Create your views here.
-
-
 class CouponList(generics.ListAPIView):
     queryset = Coupon.objects.all()
     serializer_class = CouponSerializer
@@ -58,3 +72,8 @@ class UserList(generics.ListCreateAPIView):
         serializer = UserSerializer(users, context={'request': request})
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+class UserDetail(generics.RetrieveAPIView):
+    lookup_field = 'user_id'
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
