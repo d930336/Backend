@@ -422,3 +422,44 @@ reverse:反向解析尋找url.py中的鳴子
 
 ***url.py內容***
 ![](https://i.imgur.com/P3R1dv5.png)
+
+
+可參考網站:
+https://www.jianshu.com/p/0489c309e88a
+
+https://www.bookstack.cn/read/django-rest-framework-api-guide/api-guide-reverse.md
+
+## ViewSet ＆ Routers
+
+> 我們可以使ViewSet來簡化我們上面所寫到的Detail,List，將他們兩個自動包含到一個ViewSet裡，而api_root則以Router自動生成，讓我們可以專心在如何定義要傳遞的資料以及傳遞方式
+
+
+我們在資料夾新增一個viewset.py的資料
+
+### --viewset.py
+***import:***
+![](https://i.imgur.com/3OGcsGn.png)
+
+***關於Coupon***
+只要寫兩行，他就可以自動包含detail和list的功能，而使用**ReadOnlyModelViewSet**，可以自動設定只能讀取，不用在繁雜的設定其他東西
+![](https://i.imgur.com/Lp1JgPD.png)
+
+
+***關於User***
+這裡我還在思考該如何設計，為了怕使用者可以藉由delete/put/patch刪除(更新)其他使用者資料，我們使用mixins的方法，來定義他只能做什麼
+
+> 差異:
+> put -> PUT 比較正確的定義是 Replace (Create or Update) ，存在就複寫，不存在就新增
+> patch -> 部分更新
+ 
+而為了避免使用者ID和名稱相同，我們依舊可以改寫create的判斷方式，與上面所用方式一樣就不贅述
+![](https://i.imgur.com/smYThuc.png)
+![](https://i.imgur.com/n6HLxPQ.png)
+
+***關於--url.py***
+
+我們使用預設的Routers，它會自動生成api_root，並只要透過register註冊viewset，就可以自動做出符合REST的url
+
+Routers的參考:https://www.django-rest-framework.org/api-guide/routers/
+
+![](https://i.imgur.com/Ql8ajDr.png)

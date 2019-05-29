@@ -1,8 +1,8 @@
-from django.shortcuts import render
+
 from .models import  Coupon,User,judge_duplicate_username,judge_duplicate_userid
 from .serializers import CouponSerializer  ,UserSerializer
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from rest_framework import status,viewsets,generics
+from rest_framework import status,generics
 from rest_framework.response import Response
 
 
@@ -46,6 +46,8 @@ class UserList(generics.ListCreateAPIView):
     serializer_class = UserSerializer
 
     def create(self,request,**kwargs):
+
+        #catch data
         try:
             user_id =self.get_object().user_id
             user_name = self.get_object().user_name
