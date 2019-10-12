@@ -6,13 +6,12 @@ from django.conf.urls import url
 from django.conf import settings
 from django.conf.urls.static import static
 
-from test_token.views import (MusicViewSet,
-                              CouponViewSet,
+from test_token.views import (CouponViewSet,
                               UserViewSet,
                               UserFavViewset,
                               ActivateUserByGet,
                               ResetPasswordUserByGet,
-                              UserAccountingViewset)
+                              UserAccountingViewset, )
 #rest_auth
 from rest_auth.views import (
     LoginView, LogoutView, UserDetailsView, PasswordChangeView,
@@ -29,9 +28,8 @@ from rest_framework_jwt.views import verify_jwt_token
 from test_token.views import GoogleLogin
 
 router = DefaultRouter()
-router.register(r'music', MusicViewSet, base_name='music')
 router.register(r'coupon',CouponViewSet,base_name='coupon')
-router.register(r'users',UserViewSet,base_name='user')
+router.register(r'users',UserViewSet,base_name='users')
 router.register(r'userfavs', UserFavViewset, base_name="userfavs")
 router.register(r'useraccouting', UserAccountingViewset, base_name="useraccouting")
 
