@@ -10,8 +10,8 @@ from util.permission import IsOwnerOrReadOnly
 from rest_framework.response import Response
 from rest_framework import status,generics,mixins,reverse
 
-from .models import Music,Coupon,User,UserFav,UserAccounting
-from .serializers import MusicSerializer ,CouponSerializer,UserSerializer ,UserFavSerializer,UserAccountingSerializer
+from .models import Coupon,User,UserFav,UserAccounting
+from .serializers import  CouponSerializer,UserSerializer ,UserFavSerializer,UserAccountingSerializer
 
 #設定分頁
 from rest_framework.pagination import PageNumberPagination
@@ -36,11 +36,6 @@ from templated_mail.mail import BaseEmailMessage
 
 from djoser import utils
 from djoser.conf import settings
-
-from django.views.generic import TemplateView
-
-# class HomePageView(TemplateView):
-#     template_name = 'homepage.html'
 
 class PasswordResetEmail(BaseEmailMessage):
     template_name = 'email/password_reset.html'
@@ -101,24 +96,28 @@ class CouponPagination(PageNumberPagination):
     #最多多少頁
     max_page_size = 100
 
-# Create your views here.
-class MusicViewSet(viewsets.ModelViewSet):
-    queryset = Music.objects.all()
-    serializer_class = MusicSerializer
-    parser_classes = (JSONParser,)
-    #permission_classes = [AllowAny]
-    permission_classes = (IsAuthenticated,)
-
 class UserViewSet(viewsets.GenericViewSet,
                 mixins.RetrieveModelMixin,
                 mixins.ListModelMixin):
-    permission_classes = ()
+
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
+    # 透過自定permission，來判斷使用者是誰
+    permission_classes = (IsAuthenticated, IsOwnerOrReadOnly)
 
+    lookup_field = 'user'
+
+    def get_queryset(self):
+        # 只能看到自己的收藏，不能看到別人的
+        return User.objects.filter(user=self.request.user)
+
+
+#viewsets.ModelViewSet  測試用
 # Create your views here.
-class CouponViewSet(viewsets.ModelViewSet):
+class CouponViewSet(viewsets.GenericViewSet
+                    ,mixins.RetrieveModelMixin
+                    , mixins.ListModelMixin):
     queryset = Coupon.objects.all()
     serializer_class = CouponSerializer
 
@@ -129,15 +128,18 @@ class CouponViewSet(viewsets.ModelViewSet):
     filter_backends = (DjangoFilterBackend,SearchFilter,OrderingFilter)
     filter_class = CouponFilter
 
-    #permission設置(JWT)
-    permission_classes = ()
-
     #search設定
     search_fields = ("coupon_title","coupon_class")
 
     #ordering_fields -->  設定可排序的參數      ordering  ->  默認排序
     ordering_fields = ('coupon_price',)
     ordering=('coupon_title',)
+
+    # permission設置(JWT)
+    permission_classes = (IsAuthenticated, IsOwnerOrReadOnly)
+    #因為在serializers 是 coupons ->所以這裡不是coupon_id
+    lookup_field = 'coupon_id'
+
 
 #我的最愛
 class UserFavViewset(viewsets.GenericViewSet
@@ -168,7 +170,7 @@ class UserAccountingViewset(viewsets.GenericViewSet
     queryset = UserAccounting.objects.all()
     serializer_class = UserAccountingSerializer
 
-    #透過自定permission，來判斷使用者是誰
+    # #透過自定permission，來判斷使用者是誰
     permission_classes = (IsAuthenticated, IsOwnerOrReadOnly)
 
     lookup_field = 'id'
@@ -178,9 +180,8 @@ class UserAccountingViewset(viewsets.GenericViewSet
     search_fields = ['accounting_date']
 
     def get_queryset(self):
-        # 只能看到自己的收藏，不能看到別人的
+        # 只能看到自己的記帳，不能看到別人的
         return UserAccounting.objects.filter(user=self.request.user)
-
 
 from rest_framework_jwt.serializers import JSONWebTokenSerializer
 from rest_framework_jwt.views import JSONWebTokenAPIView
