@@ -3,8 +3,7 @@ from rest_framework import serializers
 #使用者收藏
 from rest_framework.validators import UniqueTogetherValidator
 
-from .models import Music,Coupon,User,UserFav,UserAccounting
-
+from .models import Coupon,User,UserFav,UserAccounting
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
 
@@ -21,9 +20,6 @@ class CouponSerializer(serializers.ModelSerializer):
     class Meta:
         model = Coupon
         fields = ('coupon_id','coupon_title','coupon_class','coupon_content','coupon_price','coupon_img')
-
-    # def get_url(self, obj):
-    #     return str(obj.coupon_img.url)
 
 class UserFavSerializer(serializers.ModelSerializer):
     #獲取當前使用者是誰
@@ -56,8 +52,3 @@ class UserAccountingSerializer(serializers.ModelSerializer):
         model = UserAccounting
         #必填
         fields = ("user", 'id' , "accounting_data" , "accounting_date" , "accounting_class")
-
-class MusicSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Music
-        fields = ('song','singer')
