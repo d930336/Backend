@@ -46,14 +46,6 @@ class UserFav(models.Model):
     def __str__(self):
         return self.user.username
 
-class Music(models.Model):
-    song = models.TextField()
-    singer = models.TextField()
-    created = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        db_table = "music"
-
 #使用者記帳
 class UserAccounting(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="使用者")
@@ -63,7 +55,7 @@ class UserAccounting(models.Model):
     user_accounting_post_at = models.DateTimeField("PostTime",auto_now_add=True)
 
     class Meta:
-        verbose_name = '使用者收藏'
+        verbose_name = '使用者記帳'
         verbose_name_plural = verbose_name
 
     def __str__(self):
