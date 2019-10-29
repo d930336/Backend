@@ -51,4 +51,4 @@ class UserAccountingSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserAccounting
         #必填
-        fields = ("user", 'id' , "accounting_data" , "accounting_date" , "accounting_class")
+        fields = ("user", 'id' , "accounting_data" , "accounting_date" , "accounting_class","accounting_month")
