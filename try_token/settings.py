@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-
+from crawler.password import My_password
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -67,11 +67,10 @@ import datetime
 JWT_AUTH = {
     #允不允許重新刷新
     'JWT_ALLOW_REFRESH': True,
-
     #失效時間(有動還是會失效)
     'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=30),
     #失效時間(都不動的話)
-    # 'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=10),
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
 }
 #=================django-restframework-jwt=======================
 
@@ -116,7 +115,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'social_auth_test',
         'USER': 'root',
-        'PASSWORD': 'April29love',
+        'PASSWORD': My_password,
         'HOST': '127.0.0.1',
         'PORT': '3306',
         #第三方登入。。。。不設定migration會出錯
