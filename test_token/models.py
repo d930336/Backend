@@ -16,9 +16,11 @@ class Coupon(models.Model):
     # user = models.ForeignKey(User,on_delete=models.CASCADE)
     coupon_id = models.CharField(max_length=20, primary_key=True,verbose_name="優惠卷編號")
     coupon_price = models.IntegerField()
+    coupon_original_price = models.IntegerField()
     coupon_title = models.CharField("優惠卷標題",max_length=150)
     coupon_class = models.CharField(max_length=20)
-    coupon_content = models.CharField(max_length=200)
+    coupon_note = models.CharField(max_length=200)
+    coupon_notice = models.CharField(max_length=200)
     coupon_img = models.ImageField(upload_to='coupons', blank=True,null=True)
     coupon_create_at = models.DateField(auto_now_add=True)
 
@@ -52,6 +54,7 @@ class UserAccounting(models.Model):
     accounting_class = models.CharField(max_length=30)
     accounting_data  = models.IntegerField(default=0)
     accounting_date = models.CharField(max_length=30 , default=str(datetime.datetime.now().strftime("%m%d")))
+    accounting_month = models.CharField(max_length=2)
     user_accounting_post_at = models.DateTimeField("PostTime",auto_now_add=True)
 
     class Meta:
