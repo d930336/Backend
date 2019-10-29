@@ -137,6 +137,7 @@ class CouponViewSet(viewsets.GenericViewSet
 
     # permission設置(JWT)
     permission_classes = (IsAuthenticated, IsOwnerOrReadOnly)
+
     #因為在serializers 是 coupons ->所以這裡不是coupon_id
     lookup_field = 'coupon_id'
 
