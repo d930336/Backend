@@ -7,7 +7,7 @@ import re
 # ref ----> https://www.jianshu.com/p/a5aa570d8173
 def limit_unicode(text):
     # 抓出不是中文 ， 英文 ，數字的符號
-    cop = re.compile("[^\u4e00-\u9fa5^a-z^A-Z^0-9^)^(^\uff0c^;^-^\^/]")
+    cop = re.compile("[^\u4e00-\u9fa5^a-z^A-Z^0-9^)^(^\uff0c^;^\^/^.^:^\u0020^-]")
 
     # 将抓到的符號替换成空白
     result = cop.sub('', text)
@@ -77,7 +77,7 @@ mydb = mysql.connector.connect(
 )
 
 
-My_Excel = Convert_Excel_To_MySQL("KFC1028.xlsx")
+My_Excel = Convert_Excel_To_MySQL("KFC1103.xlsx")
 
 #取得Excel資料
 My_Excel.Set_DataSet()
@@ -88,8 +88,9 @@ My_Excel.Connect_To_Sql(mydb,"social_auth_test")
 # 取得SQl字串
 My_Excel.Get_InsertSQL("test_token_coupon" , ["coupon_id","coupon_title","coupon_note",
                                                 "coupon_notice","coupon_price","coupon_original_price",
-                                              "coupon_img" , "coupon_class"])
+                                              "coupon_img" , "coupon_class" ,"coupon_create_at","coupon_saving"])
 
+print(My_Excel.df["original price"])
 print(My_Excel.dataset)
 print(My_Excel.insert_sql)
 

@@ -11,9 +11,15 @@ class Set_Mysql():
         self._conn = _conn
         self._db = _db
     def Connect_To_Sql(self):
+        """
+                連線到資料庫
+                """
         self._mycursor = self._conn.cursor()
         self._mycursor.execute('use ' + str(self._db))
     def prevent_duplicate(self):
+        """
+                輸入進資料庫
+                """
         title_data = (self._title,)
         sql = "select * from mangerdb_item where title = %s"
         self._mycursor.execute(sql, title_data)
