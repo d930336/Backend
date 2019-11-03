@@ -132,7 +132,7 @@ class CouponViewSet(viewsets.GenericViewSet
     search_fields = ("coupon_title","coupon_class")
 
     #ordering_fields -->  設定可排序的參數      ordering  ->  默認排序
-    ordering_fields = ('coupon_price',)
+    ordering_fields = ('coupon_price',"coupon_saving")
     ordering=('coupon_title',)
 
     # permission設置(JWT)
