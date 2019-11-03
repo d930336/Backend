@@ -19,7 +19,8 @@ class CouponSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Coupon
-        fields = ('coupon_id','coupon_title','coupon_class','coupon_content','coupon_price','coupon_img')
+        fields = ('coupon_id','coupon_title','coupon_class','coupon_note','coupon_notice','coupon_original_price',
+                  'coupon_price','coupon_saving','coupon_img')
 
 class UserFavSerializer(serializers.ModelSerializer):
     #獲取當前使用者是誰
@@ -51,4 +52,5 @@ class UserAccountingSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserAccounting
         #必填
-        fields = ("user", 'id' , "accounting_data" , "accounting_date" , "accounting_class","accounting_month")
+        fields = ("user", 'id' , "accounting_data" , "accounting_date" , "accounting_class","accounting_month",
+                  "accounting_discount","accounting_coupon_name")
